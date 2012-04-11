@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+
+	<TableRow android:layout_width="fill_parent" android:layout_alignParentTop="true"
+		android:layout_height="wrap_content" android:id="@+id/cypherRow"
+		android:layout_weight="1">
+		<EditText android:layout_width="fill_parent" android:id="@+id/cypherText"
+			android:text="Cypher Text (Password)" android:layout_height="wrap_content"
+			android:isScrollContainer="true" ></EditText>
+	</TableRow>
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/cypherRow2"
+		android:layout_weight="1" android:layout_below="@+id/cypherRow">
+		<Button android:id="@+id/generatebutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Encode"
+			android:layout_weight=".1" />
+		<Button android:id="@+id/decodebutton" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Decode"
+			android:layout_weight=".1" />
+	</TableRow>
+	<TableRow android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:id="@+id/textRow"
+		android:layout_weight="1" android:layout_below="@+id/cypherRow2">
+		<EditText android:layout_width="fill_parent" android:id="@+id/inputText"
+			 android:text="Input Text Here"
+			android:layout_height="fill_parent" android:layout_weight="1"></EditText>
+
+		<EditText android:layout_width="fill_parent" android:id="@+id/outputText"
+			android:text="Output Text Here" android:layout_height="fill_parent"
+			android:layout_below="@+id/cypherRow" android:layout_weight="1"></EditText>
+	</TableRow>
+
+
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_alignParentBottom="true" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" ads:adUnitId="a14df25bad0caa9"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+
+</RelativeLayout>
